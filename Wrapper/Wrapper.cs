@@ -5,149 +5,97 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Domain
-{
-    public class Box
-    {
-        public Box()
-        {
-            X = -1;
-            Y = -1;
-            Value = -1;
-        }
+namespace Domain {
 
-        public short X { get; set; }
-
-        public short Y { get; set; }
-
-        public short Value { get; set; }
-
-        public bool IsEditable { get; set; }
-    }
-    public class Wrapper
-    {
+    public class Wrapper {
         private IGame game;
 
-        /// <summary>
-        /// Constructor and initializing
-        /// </summary>
-        public Wrapper()
-        {
-            game = new Game();
+        public Wrapper () => game=new Game ();
+
+        public void Create () => game.create ();
+
+        public bool SetValue (Box box) {
+            game.set (box.X, box.Y, box.Value, out int success);
+            return success==1;
         }
 
-        /// <summary>
-        /// Create a new game
-        /// </summary>
-        public void NewGame()
-        {
-            game.create();
+        public void GetValue (Box box) {
+            game.get (box.X, box.Y, out short val);
+            box.Value=val;
         }
 
-        /// <summary>
-        /// Check if value can be set
-        /// </summary>
-        /// <param name="box">Value with location that the user wants to set</param>
-        /// <returns></returns>
-        public bool SetValue(Box box)
-        {
-            int success;
-            game.set(box.X, box.Y, box.Value, out success);
-            return success == 1;
+        public bool IsValid () {
+            game.isValid (out int isValid);
+            return isValid==1;
         }
 
-        /// <summary>
-        /// Get current value for given position
-        /// </summary>
-        /// <param name="box"></param>
-        public void GetValue(Box box)
-        {
-            short val;
-            game.get(box.X, box.Y, out val);
-            box.Value = val;
-        }
-
-        /// <summary>
-        /// Validate to check if the current filled numbers are correct
-        /// </summary>
-        /// <returns></returns>
-        public bool IsValid()
-        {
-            int isValid;
-            game.isValid(out isValid);
-            return isValid == 1;
-        }
-
-        public bool IsCompleted()
-        {
+        public bool IsCompleted () {
             //Check if all current filled in values are correct
-            if (!IsValid())
+            if (!IsValid ())
                 return false;
-            return GetBoard().Where(x => x.Value > 0).Count() == 81;
+            return GetBoard ().Where (x => x.Value>0).Count ()==81;
         }
 
-        #region NotUsed
-
-        /// <summary>
-        /// Not sure when to use this
-        /// </summary>
-        /// <returns></returns>
-        public bool Read()
-        {
-            int succeeded;
-            game.read(out succeeded);
-            return succeeded == 1;
-        }
-
-        /// <summary>
-        /// Not sure when to use this
-        /// </summary>
-        /// <returns></returns>
-        public bool Write()
-        {
-            int succeeded;
-            game.write(out succeeded);
-            return succeeded == 1;
-        }
-
-        #endregion
-
-        /// <summary>
-        /// GetBoard for getting a complete list with all coordinates and values
-        /// </summary>
-        /// <returns></returns>
-        public List<Box> GetBoard()
-        {
-            var boxes = new List<Box>(81);
-            for (short x = 1; x <= 9; x++)
-            {
-                for (short y = 1; y <= 9; y++)
-                {
-                    var p = new Box();
-                    p.X = x;
-                    p.Y = y;
-                    boxes.Add(p);
-                    GetValue(p);
+        public List<Box> GetBoard () {
+            var boxes = new List<Box> (81);
+            for (short y = 1;y<=9;y++) {
+                for (short x = 1;x<=9;x++) {
+                    var p = new Box {
+                        X=x,
+                        Y=y
+                    };
+                    boxes.Add (p);
+                    GetValue (p);
                 }
             }
             return boxes;
         }
+        public List<Square> GetSquares () {
+            var squares = new List<Square> (9);
+            int srin = 0, srin2 = 0, sin = 0, brin = 0, bin = 0;
+            for (int srow = 1;srow<=3;srow++) {
+                for (int s = 1;s<=3;s++) {
+                    var boxes = new List<Box> (9);
+                    for (int brow = 1;brow<=3;brow++) {
+                        for (int b = 1;b<=3;b++) {
+                            var box = new Box {
+                                Y=Convert.ToInt16 (srow+brow-1+srin),
+                                X=Convert.ToInt16 (b+sin+brin+bin+srin2)
+                            };
+                            boxes.Add (box);
+                            GetValue (box);
+                        }
+                        bin=bin+9;
+                    }
+                    var square = new Square (boxes);
+                    squares.Add (square);
+                    brin=brin+3;
+                }
+                sin=sin+2;
+                srin=srin+2;
+                srin2=srin2+16;
+            }
+            return squares;
+        }
 
-        public Box GetHint()
-        {
-            short x, y, value;
-            int succeeded;
-            game.hint(out x, out y, out value, out succeeded);
+        public Box GetHint () {
+            game.hint (out short x, out short y, out short value, out int succeeded);
             //We didn't succeed to retrieve a value
-            if (succeeded != 1)
+            if (succeeded!=1) {
                 return null;
+            }
 
-            return new Box()
-            {
-                X = x,
-                Y = y,
-                Value = value
+            return new Box () {
+                X=x,
+                Y=y,
+                Value=value
             };
         }
+        public void Set (short x, short y, short value, out int succeeded) => game.set (x, y, value, out succeeded);
+        public void Get (short x, short y, out short value) => game.get (x, y, out value);
+        public void IsValid (out int valid) => game.isValid (out valid);
+        public void Hint (out short x, out short y, out short value, out int succeeded) => game.hint (out x, out y, out value, out succeeded);
+        public void Read (out int canRead) => game.read (out canRead);
+        public void Write (out int canWrite) => game.write (out canWrite);
     }
 }

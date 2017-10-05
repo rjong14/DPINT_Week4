@@ -17,60 +17,46 @@ namespace WPF.ViewModel
 
         public event PropertyChangedEventHandler PropertyChanged;
 
-        public GameBox(Wrapper game, Box box)
-        {
-            this.game = game;
-            this.box = box;
+        public GameBox (Wrapper game, Box box) {
+            this.game=game;
+            this.box=box;
         }
-        public short Value
-        {
-            get { return box.Value; }
-            set
-            {
+        public short Value {
+            get => box.Value;
+            set {
                 //Validate value
-                if (value > 9 || value < 1)
-                {
-                    MessageBox.Show("Vul een waarde van 1 t/m 9 in.", "Ongeldige waarde", MessageBoxButton.OK, MessageBoxImage.Exclamation);
+                if (value>9||value<1) {
+                    MessageBox.Show ("Vul een waarde van 1 t/m 9 in.", "Ongeldige waarde", MessageBoxButton.OK, MessageBoxImage.Exclamation);
                     return;
                 }
 
                 //Value has been validated, set the property
-                box.Value = value;
+                box.Value=value;
                 //Update class library value
-                game.SetValue(box);
+                game.SetValue (box);
                 //Check if game has been finished
-                if (game.IsCompleted())
-                {
-                    MessageBox.Show("De Sudoku is opgelost", "Sudoku opgelost", MessageBoxButton.OK, MessageBoxImage.Exclamation);
+                if (game.IsCompleted ()) {
+                    MessageBox.Show ("De Sudoku is opgelost", "Sudoku opgelost", MessageBoxButton.OK, MessageBoxImage.Exclamation);
                 }
-                OnPropertyChanged();
+                OnPropertyChanged ();
             }
         }
 
-        public short X
-        {
-            get { return box.X; }
-            set { box.X = value; }
+        public short X {
+            get => box.X;
+            set => box.X=value;
         }
 
-        public short Y
-        {
-            get { return box.Y; }
-            set { box.Y = value; }
+        public short Y {
+            get => box.Y;
+            set => box.Y=value;
         }
 
-        public bool IsEditable
-        {
-            get { return box.IsEditable; }
-            set { box.IsEditable = value; }
+        public bool IsEditable {
+            get => box.IsEditable;
+            set => box.IsEditable=value;
         }
 
-        protected void OnPropertyChanged([CallerMemberName] string propertyName = "")
-        {
-            if (PropertyChanged != null)
-            {
-                PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-            }
-        }
+        protected void OnPropertyChanged ([CallerMemberName] string propertyName = "") => PropertyChanged?.Invoke (this, new PropertyChangedEventArgs (propertyName));
     }
 }

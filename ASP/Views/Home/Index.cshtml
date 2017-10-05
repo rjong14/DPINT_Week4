@@ -1,0 +1,66 @@
+﻿@model Domain.Wrapper
+
+@{
+    ViewBag.Title = "Sudoku";
+}
+
+<h2>Sudoku</h2>
+
+<script src="@Url.Content("~/Scripts/Sudoku.js")"></script>
+
+<div class="row">
+    <div class="col-md-4">
+        <input type="button" class="btn-success" id="btnnewgame" value="Nieuw Spel" onclick="location.href='@Url.Action("NewGame", "Home")'" />
+        <input type="button" class="btn-danger" id="btncheatgame" value="Valsspelen" onclick="location.href='@Url.Action("Hint", "Home")'" />
+        <input type="button" class="btn-primary" id="btncheckgame" value="Controleer Spel" onclick="location.href='@Url.Action("Validate", "Home")'" />
+    </div>
+</div>
+
+<div class="row">
+    <hr />
+</div>
+
+@if (Model.IsCompleted())
+{
+    <script type="text/javascript">
+        $("#btncheatgame").prop('disabled', true);
+        alert("Gefeliciteerd! Je hebt de sudoku opgelost!");
+    </script>
+}
+else
+{
+    <script type="text/javascript">
+        $("#btncheatgame").prop('disabled', false);
+        alert("Sudoku is nog niet correct");
+    </script>
+}
+
+<div class="row">
+    <div class="col-md-12">
+            @{
+                for (int i = 0; i < 81; i++)
+                {
+                    var x = (short)((i % 9) + 1);
+                    var y = (short)((i / 9) + 1);
+                    if (x == 1)
+                    {
+                        @Html.Raw("")
+                    }
+                    var box = new Domain.Box()
+                    {
+                        X = x,
+                        Y = y
+                    };
+                    Model.GetValue(box);
+                    box.IsEditable = box.Value == 0;
+                    //Create unique id for hidden field
+                    var id = String.Format("{0},{1}", box.X, box.Y);
+                    @Html.Raw("<div align='center' width='80' height='80'><input name='" + id + "' min-width='50px' class='form-control' type='text' value='" + box.Value + "'/></div>");
+                    if (x == 9)
+                    {
+                        @Html.Raw("<br />")
+                    }
+                }
+            }
+    </div>
+</div>
