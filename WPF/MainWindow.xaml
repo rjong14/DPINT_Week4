@@ -29,104 +29,104 @@
         </StackPanel>
         <UniformGrid Grid.Column="1" Columns="3" Rows="3">
             <UniformGrid Columns="3" Rows="3" Margin="15">
-                <TextBox IsEnabled="{Binding GameBoxes[0].IsEditable}" Text="{Binding GameBoxes[0].Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
-                <TextBox IsEnabled="{Binding GameBoxes[1].IsEditable}" Text="{Binding GameBoxes[1].Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
-                <TextBox IsEnabled="{Binding GameBoxes[2].IsEditable}" Text="{Binding GameBoxes[2].Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
-                <TextBox IsEnabled="{Binding GameBoxes[9].IsEditable}" Text="{Binding GameBoxes[9].Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
-                <TextBox IsEnabled="{Binding GameBoxes[10].IsEditable}" Text="{Binding GameBoxes[10].Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
-                <TextBox IsEnabled="{Binding GameBoxes[11].IsEditable}" Text="{Binding GameBoxes[11].Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
-                <TextBox IsEnabled="{Binding GameBoxes[18].IsEditable}" Text="{Binding GameBoxes[18].Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
-                <TextBox IsEnabled="{Binding GameBoxes[19].IsEditable}" Text="{Binding GameBoxes[19].Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
-                <TextBox IsEnabled="{Binding GameBoxes[20].IsEditable}" Text="{Binding GameBoxes[20].Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                <TextBox IsEnabled="{Binding ViewBoxes[0].IsEditable}" Text="{Binding ViewBoxes[0].Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                <TextBox IsEnabled="{Binding ViewBoxes[1].IsEditable}" Text="{Binding ViewBoxes[1].Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                <TextBox IsEnabled="{Binding ViewBoxes[2].IsEditable}" Text="{Binding ViewBoxes[2].Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                <TextBox IsEnabled="{Binding ViewBoxes[9].IsEditable}" Text="{Binding ViewBoxes[9].Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                <TextBox IsEnabled="{Binding ViewBoxes[10].IsEditable}" Text="{Binding ViewBoxes[10].Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                <TextBox IsEnabled="{Binding ViewBoxes[11].IsEditable}" Text="{Binding ViewBoxes[11].Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                <TextBox IsEnabled="{Binding ViewBoxes[18].IsEditable}" Text="{Binding ViewBoxes[18].Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                <TextBox IsEnabled="{Binding ViewBoxes[19].IsEditable}" Text="{Binding ViewBoxes[19].Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                <TextBox IsEnabled="{Binding ViewBoxes[20].IsEditable}" Text="{Binding ViewBoxes[20].Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
             </UniformGrid>
             <UniformGrid Columns="3" Rows="3" Margin="15">
-                <TextBox IsEnabled="{Binding GameBoxes[3].IsEditable}" Text="{Binding GameBoxes[3].Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
-                <TextBox IsEnabled="{Binding GameBoxes[4].IsEditable}" Text="{Binding GameBoxes[4].Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
-                <TextBox IsEnabled="{Binding GameBoxes[5].IsEditable}" Text="{Binding GameBoxes[5].Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
-                <TextBox IsEnabled="{Binding GameBoxes[12].IsEditable}" Text="{Binding GameBoxes[12].Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
-                <TextBox IsEnabled="{Binding GameBoxes[13].IsEditable}" Text="{Binding GameBoxes[13].Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
-                <TextBox IsEnabled="{Binding GameBoxes[14].IsEditable}" Text="{Binding GameBoxes[14].Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
-                <TextBox IsEnabled="{Binding GameBoxes[21].IsEditable}" Text="{Binding GameBoxes[21].Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
-                <TextBox IsEnabled="{Binding GameBoxes[22].IsEditable}" Text="{Binding GameBoxes[22].Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
-                <TextBox IsEnabled="{Binding GameBoxes[23].IsEditable}" Text="{Binding GameBoxes[23].Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                <TextBox IsEnabled="{Binding ViewBoxes[3].IsEditable}" Text="{Binding ViewBoxes[3].Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                <TextBox IsEnabled="{Binding ViewBoxes[4].IsEditable}" Text="{Binding ViewBoxes[4].Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                <TextBox IsEnabled="{Binding ViewBoxes[5].IsEditable}" Text="{Binding ViewBoxes[5].Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                <TextBox IsEnabled="{Binding ViewBoxes[12].IsEditable}" Text="{Binding ViewBoxes[12].Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                <TextBox IsEnabled="{Binding ViewBoxes[13].IsEditable}" Text="{Binding ViewBoxes[13].Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                <TextBox IsEnabled="{Binding ViewBoxes[14].IsEditable}" Text="{Binding ViewBoxes[14].Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                <TextBox IsEnabled="{Binding ViewBoxes[21].IsEditable}" Text="{Binding ViewBoxes[21].Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                <TextBox IsEnabled="{Binding ViewBoxes[22].IsEditable}" Text="{Binding ViewBoxes[22].Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                <TextBox IsEnabled="{Binding ViewBoxes[23].IsEditable}" Text="{Binding ViewBoxes[23].Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
 
             </UniformGrid>
             <UniformGrid Columns="3" Rows="3" Margin="15">
-                <TextBox IsEnabled="{Binding GameBoxes[6].IsEditable}" Text="{Binding GameBoxes[6].Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
-                <TextBox IsEnabled="{Binding GameBoxes[7].IsEditable}" Text="{Binding GameBoxes[7].Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
-                <TextBox IsEnabled="{Binding GameBoxes[8].IsEditable}" Text="{Binding GameBoxes[8].Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
-                <TextBox IsEnabled="{Binding GameBoxes[15].IsEditable}" Text="{Binding GameBoxes[15].Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
-                <TextBox IsEnabled="{Binding GameBoxes[16].IsEditable}" Text="{Binding GameBoxes[16].Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
-                <TextBox IsEnabled="{Binding GameBoxes[17].IsEditable}" Text="{Binding GameBoxes[17].Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
-                <TextBox IsEnabled="{Binding GameBoxes[24].IsEditable}" Text="{Binding GameBoxes[24].Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
-                <TextBox IsEnabled="{Binding GameBoxes[25].IsEditable}" Text="{Binding GameBoxes[25].Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
-                <TextBox IsEnabled="{Binding GameBoxes[26].IsEditable}" Text="{Binding GameBoxes[26].Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                <TextBox IsEnabled="{Binding ViewBoxes[6].IsEditable}" Text="{Binding ViewBoxes[6].Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                <TextBox IsEnabled="{Binding ViewBoxes[7].IsEditable}" Text="{Binding ViewBoxes[7].Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                <TextBox IsEnabled="{Binding ViewBoxes[8].IsEditable}" Text="{Binding ViewBoxes[8].Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                <TextBox IsEnabled="{Binding ViewBoxes[15].IsEditable}" Text="{Binding ViewBoxes[15].Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                <TextBox IsEnabled="{Binding ViewBoxes[16].IsEditable}" Text="{Binding ViewBoxes[16].Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                <TextBox IsEnabled="{Binding ViewBoxes[17].IsEditable}" Text="{Binding ViewBoxes[17].Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                <TextBox IsEnabled="{Binding ViewBoxes[24].IsEditable}" Text="{Binding ViewBoxes[24].Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                <TextBox IsEnabled="{Binding ViewBoxes[25].IsEditable}" Text="{Binding ViewBoxes[25].Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                <TextBox IsEnabled="{Binding ViewBoxes[26].IsEditable}" Text="{Binding ViewBoxes[26].Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
             </UniformGrid>
             <UniformGrid Columns="3" Rows="3" Margin="15">
-                <TextBox IsEnabled="{Binding GameBoxes[27].IsEditable}" Text ="{Binding GameBoxes[27].Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
-                <TextBox IsEnabled="{Binding GameBoxes[28].IsEditable}" Text ="{Binding GameBoxes[28].Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
-                <TextBox IsEnabled="{Binding GameBoxes[29].IsEditable}" Text ="{Binding GameBoxes[29].Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
-                <TextBox IsEnabled="{Binding GameBoxes[36].IsEditable}" Text ="{Binding GameBoxes[36].Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
-                <TextBox IsEnabled="{Binding GameBoxes[37].IsEditable}" Text ="{Binding GameBoxes[37].Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
-                <TextBox IsEnabled="{Binding GameBoxes[38].IsEditable}" Text ="{Binding GameBoxes[38].Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
-                <TextBox IsEnabled="{Binding GameBoxes[45].IsEditable}" Text ="{Binding GameBoxes[45].Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
-                <TextBox IsEnabled="{Binding GameBoxes[46].IsEditable}" Text ="{Binding GameBoxes[46].Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
-                <TextBox IsEnabled="{Binding GameBoxes[47].IsEditable}" Text ="{Binding GameBoxes[47].Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                <TextBox IsEnabled="{Binding ViewBoxes[27].IsEditable}" Text ="{Binding ViewBoxes[27].Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                <TextBox IsEnabled="{Binding ViewBoxes[28].IsEditable}" Text ="{Binding ViewBoxes[28].Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                <TextBox IsEnabled="{Binding ViewBoxes[29].IsEditable}" Text ="{Binding ViewBoxes[29].Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                <TextBox IsEnabled="{Binding ViewBoxes[36].IsEditable}" Text ="{Binding ViewBoxes[36].Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                <TextBox IsEnabled="{Binding ViewBoxes[37].IsEditable}" Text ="{Binding ViewBoxes[37].Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                <TextBox IsEnabled="{Binding ViewBoxes[38].IsEditable}" Text ="{Binding ViewBoxes[38].Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                <TextBox IsEnabled="{Binding ViewBoxes[45].IsEditable}" Text ="{Binding ViewBoxes[45].Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                <TextBox IsEnabled="{Binding ViewBoxes[46].IsEditable}" Text ="{Binding ViewBoxes[46].Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                <TextBox IsEnabled="{Binding ViewBoxes[47].IsEditable}" Text ="{Binding ViewBoxes[47].Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
             </UniformGrid>
             <UniformGrid Columns="3" Rows="3" Margin="15">
-                <TextBox IsEnabled="{Binding GameBoxes[30].IsEditable}" Text ="{Binding GameBoxes[30].Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
-                <TextBox IsEnabled="{Binding GameBoxes[31].IsEditable}" Text ="{Binding GameBoxes[31].Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
-                <TextBox IsEnabled="{Binding GameBoxes[32].IsEditable}" Text ="{Binding GameBoxes[32].Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
-                <TextBox IsEnabled="{Binding GameBoxes[39].IsEditable}" Text ="{Binding GameBoxes[39].Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
-                <TextBox IsEnabled="{Binding GameBoxes[40].IsEditable}" Text ="{Binding GameBoxes[40].Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
-                <TextBox IsEnabled="{Binding GameBoxes[41].IsEditable}" Text ="{Binding GameBoxes[41].Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
-                <TextBox IsEnabled="{Binding GameBoxes[48].IsEditable}" Text ="{Binding GameBoxes[48].Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
-                <TextBox IsEnabled="{Binding GameBoxes[49].IsEditable}" Text ="{Binding GameBoxes[49].Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
-                <TextBox IsEnabled="{Binding GameBoxes[50].IsEditable}" Text ="{Binding GameBoxes[50].Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                <TextBox IsEnabled="{Binding ViewBoxes[30].IsEditable}" Text ="{Binding ViewBoxes[30].Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                <TextBox IsEnabled="{Binding ViewBoxes[31].IsEditable}" Text ="{Binding ViewBoxes[31].Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                <TextBox IsEnabled="{Binding ViewBoxes[32].IsEditable}" Text ="{Binding ViewBoxes[32].Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                <TextBox IsEnabled="{Binding ViewBoxes[39].IsEditable}" Text ="{Binding ViewBoxes[39].Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                <TextBox IsEnabled="{Binding ViewBoxes[40].IsEditable}" Text ="{Binding ViewBoxes[40].Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                <TextBox IsEnabled="{Binding ViewBoxes[41].IsEditable}" Text ="{Binding ViewBoxes[41].Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                <TextBox IsEnabled="{Binding ViewBoxes[48].IsEditable}" Text ="{Binding ViewBoxes[48].Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                <TextBox IsEnabled="{Binding ViewBoxes[49].IsEditable}" Text ="{Binding ViewBoxes[49].Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                <TextBox IsEnabled="{Binding ViewBoxes[50].IsEditable}" Text ="{Binding ViewBoxes[50].Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
             </UniformGrid>
             <UniformGrid Columns="3" Rows="3" Margin="15">
-                <TextBox IsEnabled="{Binding GameBoxes[33].IsEditable}" Text ="{Binding GameBoxes[33].Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
-                <TextBox IsEnabled="{Binding GameBoxes[34].IsEditable}" Text ="{Binding GameBoxes[34].Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
-                <TextBox IsEnabled="{Binding GameBoxes[35].IsEditable}" Text ="{Binding GameBoxes[35].Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
-                <TextBox IsEnabled="{Binding GameBoxes[42].IsEditable}" Text ="{Binding GameBoxes[42].Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
-                <TextBox IsEnabled="{Binding GameBoxes[43].IsEditable}" Text ="{Binding GameBoxes[43].Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
-                <TextBox IsEnabled="{Binding GameBoxes[44].IsEditable}" Text ="{Binding GameBoxes[44].Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
-                <TextBox IsEnabled="{Binding GameBoxes[51].IsEditable}" Text ="{Binding GameBoxes[51].Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
-                <TextBox IsEnabled="{Binding GameBoxes[52].IsEditable}" Text ="{Binding GameBoxes[52].Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
-                <TextBox IsEnabled="{Binding GameBoxes[53].IsEditable}" Text ="{Binding GameBoxes[53].Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                <TextBox IsEnabled="{Binding ViewBoxes[33].IsEditable}" Text ="{Binding ViewBoxes[33].Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                <TextBox IsEnabled="{Binding ViewBoxes[34].IsEditable}" Text ="{Binding ViewBoxes[34].Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                <TextBox IsEnabled="{Binding ViewBoxes[35].IsEditable}" Text ="{Binding ViewBoxes[35].Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                <TextBox IsEnabled="{Binding ViewBoxes[42].IsEditable}" Text ="{Binding ViewBoxes[42].Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                <TextBox IsEnabled="{Binding ViewBoxes[43].IsEditable}" Text ="{Binding ViewBoxes[43].Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                <TextBox IsEnabled="{Binding ViewBoxes[44].IsEditable}" Text ="{Binding ViewBoxes[44].Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                <TextBox IsEnabled="{Binding ViewBoxes[51].IsEditable}" Text ="{Binding ViewBoxes[51].Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                <TextBox IsEnabled="{Binding ViewBoxes[52].IsEditable}" Text ="{Binding ViewBoxes[52].Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                <TextBox IsEnabled="{Binding ViewBoxes[53].IsEditable}" Text ="{Binding ViewBoxes[53].Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
             </UniformGrid>
             <UniformGrid Columns="3" Rows="3" Margin="15">
-                <TextBox IsEnabled="{Binding GameBoxes[54].IsEditable}" Text ="{Binding GameBoxes[54].Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
-                <TextBox IsEnabled="{Binding GameBoxes[55].IsEditable}" Text ="{Binding GameBoxes[55].Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
-                <TextBox IsEnabled="{Binding GameBoxes[56].IsEditable}" Text ="{Binding GameBoxes[56].Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
-                <TextBox IsEnabled="{Binding GameBoxes[63].IsEditable}" Text ="{Binding GameBoxes[63].Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
-                <TextBox IsEnabled="{Binding GameBoxes[64].IsEditable}" Text ="{Binding GameBoxes[64].Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
-                <TextBox IsEnabled="{Binding GameBoxes[65].IsEditable}" Text ="{Binding GameBoxes[65].Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
-                <TextBox IsEnabled="{Binding GameBoxes[72].IsEditable}" Text ="{Binding GameBoxes[72].Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
-                <TextBox IsEnabled="{Binding GameBoxes[73].IsEditable}" Text ="{Binding GameBoxes[73].Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
-                <TextBox IsEnabled="{Binding GameBoxes[74].IsEditable}" Text ="{Binding GameBoxes[74].Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                <TextBox IsEnabled="{Binding ViewBoxes[54].IsEditable}" Text ="{Binding ViewBoxes[54].Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                <TextBox IsEnabled="{Binding ViewBoxes[55].IsEditable}" Text ="{Binding ViewBoxes[55].Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                <TextBox IsEnabled="{Binding ViewBoxes[56].IsEditable}" Text ="{Binding ViewBoxes[56].Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                <TextBox IsEnabled="{Binding ViewBoxes[63].IsEditable}" Text ="{Binding ViewBoxes[63].Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                <TextBox IsEnabled="{Binding ViewBoxes[64].IsEditable}" Text ="{Binding ViewBoxes[64].Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                <TextBox IsEnabled="{Binding ViewBoxes[65].IsEditable}" Text ="{Binding ViewBoxes[65].Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                <TextBox IsEnabled="{Binding ViewBoxes[72].IsEditable}" Text ="{Binding ViewBoxes[72].Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                <TextBox IsEnabled="{Binding ViewBoxes[73].IsEditable}" Text ="{Binding ViewBoxes[73].Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                <TextBox IsEnabled="{Binding ViewBoxes[74].IsEditable}" Text ="{Binding ViewBoxes[74].Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
             </UniformGrid>
             <UniformGrid Columns="3" Rows="3" Margin="15">
-                <TextBox IsEnabled="{Binding GameBoxes[57].IsEditable}" Text ="{Binding GameBoxes[57].Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
-                <TextBox IsEnabled="{Binding GameBoxes[58].IsEditable}" Text ="{Binding GameBoxes[58].Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
-                <TextBox IsEnabled="{Binding GameBoxes[59].IsEditable}" Text ="{Binding GameBoxes[59].Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
-                <TextBox IsEnabled="{Binding GameBoxes[66].IsEditable}" Text ="{Binding GameBoxes[66].Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
-                <TextBox IsEnabled="{Binding GameBoxes[67].IsEditable}" Text ="{Binding GameBoxes[67].Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
-                <TextBox IsEnabled="{Binding GameBoxes[68].IsEditable}" Text ="{Binding GameBoxes[68].Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
-                <TextBox IsEnabled="{Binding GameBoxes[75].IsEditable}" Text ="{Binding GameBoxes[75].Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
-                <TextBox IsEnabled="{Binding GameBoxes[76].IsEditable}" Text ="{Binding GameBoxes[76].Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
-                <TextBox IsEnabled="{Binding GameBoxes[77].IsEditable}" Text ="{Binding GameBoxes[77].Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                <TextBox IsEnabled="{Binding ViewBoxes[57].IsEditable}" Text ="{Binding ViewBoxes[57].Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                <TextBox IsEnabled="{Binding ViewBoxes[58].IsEditable}" Text ="{Binding ViewBoxes[58].Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                <TextBox IsEnabled="{Binding ViewBoxes[59].IsEditable}" Text ="{Binding ViewBoxes[59].Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                <TextBox IsEnabled="{Binding ViewBoxes[66].IsEditable}" Text ="{Binding ViewBoxes[66].Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                <TextBox IsEnabled="{Binding ViewBoxes[67].IsEditable}" Text ="{Binding ViewBoxes[67].Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                <TextBox IsEnabled="{Binding ViewBoxes[68].IsEditable}" Text ="{Binding ViewBoxes[68].Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                <TextBox IsEnabled="{Binding ViewBoxes[75].IsEditable}" Text ="{Binding ViewBoxes[75].Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                <TextBox IsEnabled="{Binding ViewBoxes[76].IsEditable}" Text ="{Binding ViewBoxes[76].Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                <TextBox IsEnabled="{Binding ViewBoxes[77].IsEditable}" Text ="{Binding ViewBoxes[77].Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
             </UniformGrid>
             <UniformGrid Columns="3" Rows="3" Margin="15">
-                <TextBox IsEnabled="{Binding GameBoxes[60].IsEditable}" Text ="{Binding GameBoxes[60].Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
-                <TextBox IsEnabled="{Binding GameBoxes[61].IsEditable}" Text ="{Binding GameBoxes[61].Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
-                <TextBox IsEnabled="{Binding GameBoxes[62].IsEditable}" Text ="{Binding GameBoxes[62].Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
-                <TextBox IsEnabled="{Binding GameBoxes[69].IsEditable}" Text ="{Binding GameBoxes[69].Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
-                <TextBox IsEnabled="{Binding GameBoxes[70].IsEditable}" Text ="{Binding GameBoxes[70].Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
-                <TextBox IsEnabled="{Binding GameBoxes[71].IsEditable}" Text ="{Binding GameBoxes[71].Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
-                <TextBox IsEnabled="{Binding GameBoxes[78].IsEditable}" Text ="{Binding GameBoxes[78].Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
-                <TextBox IsEnabled="{Binding GameBoxes[79].IsEditable}" Text ="{Binding GameBoxes[79].Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
-                <TextBox IsEnabled="{Binding GameBoxes[80].IsEditable}" Text ="{Binding GameBoxes[80].Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                <TextBox IsEnabled="{Binding ViewBoxes[60].IsEditable}" Text ="{Binding ViewBoxes[60].Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                <TextBox IsEnabled="{Binding ViewBoxes[61].IsEditable}" Text ="{Binding ViewBoxes[61].Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                <TextBox IsEnabled="{Binding ViewBoxes[62].IsEditable}" Text ="{Binding ViewBoxes[62].Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                <TextBox IsEnabled="{Binding ViewBoxes[69].IsEditable}" Text ="{Binding ViewBoxes[69].Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                <TextBox IsEnabled="{Binding ViewBoxes[70].IsEditable}" Text ="{Binding ViewBoxes[70].Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                <TextBox IsEnabled="{Binding ViewBoxes[71].IsEditable}" Text ="{Binding ViewBoxes[71].Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                <TextBox IsEnabled="{Binding ViewBoxes[78].IsEditable}" Text ="{Binding ViewBoxes[78].Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                <TextBox IsEnabled="{Binding ViewBoxes[79].IsEditable}" Text ="{Binding ViewBoxes[79].Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                <TextBox IsEnabled="{Binding ViewBoxes[80].IsEditable}" Text ="{Binding ViewBoxes[80].Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
             </UniformGrid>
         </UniformGrid>
     </Grid>

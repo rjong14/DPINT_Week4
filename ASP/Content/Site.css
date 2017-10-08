@@ -1,6 +1,8 @@
 ﻿body {
     padding-top: 50px;
     padding-bottom: 20px;
+    font-family: Trebuchet MS,Arial,sans-serif;
+    margin: 0;
 }
 
 /* Set padding to keep content from hitting the edges */
@@ -21,4 +23,103 @@ input,
 select,
 textarea {
     max-width: 280px;
+}
+
+#sudoku {
+    display: block;
+    position: absolute;
+    width: 31vw;
+    height: 31vw;
+    background-color: #111;
+    left: 50%;
+    top: 50%;
+    margin-left: -15.5vw;
+    margin-top: -17vw;
+}
+
+.box {
+    display: block;
+    position: relative;
+    float: left;
+    top: 0.5vw;
+    left: 0.5vw;
+    margin-right: 0.3vw;
+    margin-bottom: 0.3vw;
+    width: 3vw;
+    height: 3vw;
+    background-color: white;
+    overflow: hidden;
+}
+    .box:nth-of-type(3n+1) {
+        margin-right: 0.6vw;
+    }
+    .box:nth-of-type(27n+1) {
+        margin-bottom: 0.6vw;
+    }
+    .box:nth-of-type(even) {
+        background-color: rgba(255, 255, 255, 0.775);
+    }
+
+.numberbox {
+    display: block;
+    position: absolute;
+    width: 3vw;
+    height: 3vw;
+    border: none;
+    font-size: 3vw;
+    line-height: 0;
+    text-align: center;
+    font-weight: 700;
+    color: #333;
+    outline: none;
+    background-color: transparent;
+}
+
+#buttonpnl {
+    display: block;
+    position: absolute;
+    width: 31vw;
+    height: 3.5vw;
+    top: 31vw;
+    background-color: #222;
+}
+
+.button {
+    display: block;
+    position: relative;
+    float: left;
+    left: 0.5vw;
+    top: 0.5vw;
+    margin-right: 0.6vw;
+    width: 9.6vw;
+    height: 2.5vw;
+    border: none;
+    background-color: #380;
+    outline: none;
+    cursor: pointer;
+    font-size: 1.5vw;
+    color: #ddd;
+    text-shadow: 0.1vw 0.1vw 0 #160;
+    font-family: Trebuchet MS,Arial,sans-serif;
+    transition: 200ms;
+    box-shadow: 0.2vw 0.2vw 0 #111;
+}
+
+    .button:hover {
+        background-color: #490;
+        margin-top: 0.15vw;
+        box-shadow: 0.2vw 0.2vw 0 #111;
+    }
+
+    .button:active {
+        background-color: #ddd;
+        color: #490;
+    }
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0;
 }

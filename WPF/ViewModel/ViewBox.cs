@@ -10,14 +10,14 @@ using System.Windows;
 
 namespace WPF.ViewModel
 {
-    public class GameBox : INotifyPropertyChanged
+    public class ViewBox : INotifyPropertyChanged
     {
         private Wrapper game;
         private Box box;
 
         public event PropertyChangedEventHandler PropertyChanged;
 
-        public GameBox (Wrapper game, Box box) {
+        public ViewBox (Wrapper game, Box box) {
             this.game=game;
             this.box=box;
         }

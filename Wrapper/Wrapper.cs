@@ -25,7 +25,8 @@ namespace Domain {
         }
 
         public bool IsValid () {
-            game.isValid (out int isValid);
+            int isValid;
+            game.isValid (out isValid);
             return isValid==1;
         }
 
@@ -93,7 +94,7 @@ namespace Domain {
         }
         public void Set (short x, short y, short value, out int succeeded) => game.set (x, y, value, out succeeded);
         public void Get (short x, short y, out short value) => game.get (x, y, out value);
-        public void IsValid (out int valid) => game.isValid (out valid);
+        //public void IsValid (out int valid) => game.isValid (out valid);
         public void Hint (out short x, out short y, out short value, out int succeeded) => game.hint (out x, out y, out value, out succeeded);
         public void Read (out int canRead) => game.read (out canRead);
         public void Write (out int canWrite) => game.write (out canWrite);

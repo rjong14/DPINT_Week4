@@ -26,7 +26,7 @@ namespace WPF.ViewModel {
 
         private Wrapper sudoku;
 
-        public ObservableCollection<GameBox> GameBoxes { get; set; }
+        public ObservableCollection<ViewBox> ViewBoxes { get; set; }
         public short CurrentValue { get; set; }
 
         public ICommand NewGameCommand { get; private set; }
@@ -37,21 +37,24 @@ namespace WPF.ViewModel {
             sudoku=new Wrapper ();
 
             NewGame ();
+            NewGameCommand=new RelayCommand (NewGame, CanNewGame);
+            CheckCommand=new RelayCommand (CheckGame, CanCheckGame);
+            CheatCommand=new RelayCommand (CheatGame, CanCheatGame);
         }
 
 
-        public bool CanNewGame => true;
+        public bool CanNewGame () { return true; }
 
-        public bool CanCheckGame => true;
+        public bool CanCheckGame () { return true; }
 
-        public bool CanCheatGame => true;
+        public bool CanCheatGame () { return true; }
 
 
         public void NewGame () {
             //Let class library create a new game
             sudoku.Create ();
             //Iterate over all existing locations
-            var boxes = new List<GameBox> ();
+            var boxes = new List<ViewBox> ();
             for (int i = 0;i<81;i++) {
                 var p = new Box {
                     X=Convert.ToInt16 (((i/9)+1)),
@@ -60,9 +63,9 @@ namespace WPF.ViewModel {
                 sudoku.GetValue (p);
                 //Lock default values
                 p.IsEditable=p.Value==0;
-                boxes.Add (new GameBox (sudoku, p));
+                boxes.Add (new ViewBox (sudoku, p));
             }
-            GameBoxes=new ObservableCollection<GameBox> (boxes);
+            ViewBoxes=new ObservableCollection<ViewBox> (boxes);
             //Make notification of changed locations
             RaisePropertyChanged ("GameBoxes");
         }
@@ -75,14 +78,14 @@ namespace WPF.ViewModel {
         }
 
         public void CheatGame () {
-            int toSolve = GameBoxes.Where (x => x.Value==0).Count ()-2;
+            int toSolve = ViewBoxes.Where (x => x.Value==0).Count ()-2;
             for (int i = 0;i<toSolve;i++) {
                 //Ask for a hint
-                var position = sudoku.GetHint ();
+                var box = sudoku.GetHint ();
                 //Check at what location the hint is positioned
                 //We are always able to grab the first, since it is a hint from the dll
-                var loc = GameBoxes.Where (x => x.X==position.X&&x.Y==position.Y).First ();
-                loc.Value=position.Value;
+                var vBox = ViewBoxes.Where (x => x.X==box.X&&x.Y==box.Y).First ();
+                vBox.Value=box.Value;
             }
         }
     }
