@@ -51,34 +51,6 @@ namespace Domain {
             }
             return boxes;
         }
-        public List<Square> GetSquares () {
-            var squares = new List<Square> (9);
-            int srin = 0, srin2 = 0, sin = 0, brin = 0, bin = 0;
-            for (int srow = 1;srow<=3;srow++) {
-                for (int s = 1;s<=3;s++) {
-                    var boxes = new List<Box> (9);
-                    for (int brow = 1;brow<=3;brow++) {
-                        for (int b = 1;b<=3;b++) {
-                            var box = new Box {
-                                Y=Convert.ToInt16 (srow+brow-1+srin),
-                                X=Convert.ToInt16 (b+sin+brin+bin+srin2)
-                            };
-                            boxes.Add (box);
-                            GetValue (box);
-                        }
-                        bin=bin+9;
-                    }
-                    var square = new Square (boxes);
-                    squares.Add (square);
-                    brin=brin+3;
-                }
-                sin=sin+2;
-                srin=srin+2;
-                srin2=srin2+16;
-            }
-            return squares;
-        }
-
         public Box GetHint () {
             game.hint (out short x, out short y, out short value, out int succeeded);
             //We didn't succeed to retrieve a value

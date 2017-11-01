@@ -5,20 +5,16 @@
     margin: 0;
 }
 
-/* Set padding to keep content from hitting the edges */
+
 .body-content {
     padding-left: 15px;
     padding-right: 15px;
 }
 
-/* Override the default bootstrap behavior where horizontal description lists 
-   will truncate terms that are too long to fit in the left column 
-*/
 .dl-horizontal dt {
     white-space: normal;
 }
 
-/* Set width on the form input elements since they're 100% wide by default */
 input,
 select,
 textarea {
@@ -26,6 +22,7 @@ textarea {
 }
 
 #sudoku {
+    z-index: 10;
     display: block;
     position: absolute;
     width: 31vw;
@@ -122,4 +119,23 @@ input[type=number]::-webkit-outer-spin-button {
     -moz-appearance: none;
     appearance: none;
     margin: 0;
+}
+
+div.lol {
+    width: 160px;
+    height: 50px;
+    position: fixed;
+}
+button.ch {
+    width: 160px;
+    height: 50px;
+    position: fixed;
+    border: none;
+    background-color: #380;
+    outline: none;
+    cursor: pointer;
+    font-size: 20px;
+    color: #ddd;
+    text-shadow: 1px 1px 0 #160;
+    font-family: Trebuchet MS,Arial,sans-serif;
 }

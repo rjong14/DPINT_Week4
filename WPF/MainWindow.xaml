@@ -25,6 +25,7 @@
         <StackPanel Grid.Column="0" Background="White">
             <Button Command="{Binding NewGameCommand}">Start Nieuw Spel</Button>
             <Button Command="{Binding CheatCommand}">Cheat</Button>
+            <Button Command="{Binding HintCommand}">Hint</Button>
             <Button Command="{Binding CheckCommand}">Check Spel</Button>
         </StackPanel>
         <UniformGrid Grid.Column="1" Columns="3" Rows="3">

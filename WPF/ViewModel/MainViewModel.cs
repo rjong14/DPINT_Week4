@@ -32,28 +32,20 @@ namespace WPF.ViewModel {
         public ICommand NewGameCommand { get; private set; }
         public ICommand CheatCommand { get; private set; }
         public ICommand CheckCommand { get; private set; }
+        public ICommand HintCommand { get; private set; }
 
         public MainViewModel () {
             sudoku=new Wrapper ();
 
             NewGame ();
-            NewGameCommand=new RelayCommand (NewGame, CanNewGame);
-            CheckCommand=new RelayCommand (CheckGame, CanCheckGame);
-            CheatCommand=new RelayCommand (CheatGame, CanCheatGame);
+            NewGameCommand=new RelayCommand (NewGame);
+            CheckCommand=new RelayCommand (CheckGame);
+            CheatCommand=new RelayCommand (CheatGame);
+            HintCommand=new RelayCommand (HintGame);
         }
 
-
-        public bool CanNewGame () { return true; }
-
-        public bool CanCheckGame () { return true; }
-
-        public bool CanCheatGame () { return true; }
-
-
         public void NewGame () {
-            //Let class library create a new game
             sudoku.Create ();
-            //Iterate over all existing locations
             var boxes = new List<ViewBox> ();
             for (int i = 0;i<81;i++) {
                 var p = new Box {
@@ -61,29 +53,34 @@ namespace WPF.ViewModel {
                     Y=Convert.ToInt16 (((i%9)+1))
                 };
                 sudoku.GetValue (p);
-                //Lock default values
                 p.IsEditable=p.Value==0;
                 boxes.Add (new ViewBox (sudoku, p));
             }
             ViewBoxes=new ObservableCollection<ViewBox> (boxes);
-            //Make notification of changed locations
-            RaisePropertyChanged ("GameBoxes");
+            RaisePropertyChanged ("ViewBoxes");
         }
-
         public void CheckGame () {
-            //Check if current board values are correct, notify user with a messagebox
             string message;
-            message=sudoku.IsValid () ? "De cijfers kloppen." : "Éen of meerder cijfers zijn Fout.";
-            MessageBox.Show (message, "Spel controle");
+            message=sudoku.IsValid () ? "Game == valid" : "Game != valid";
+            MessageBox.Show (message, "Check");
         }
+        public void HintGame () {
+            int toSolve = ViewBoxes.Where (x => x.Value==0).Count ();
 
-        public void CheatGame () {
-            int toSolve = ViewBoxes.Where (x => x.Value==0).Count ()-2;
-            for (int i = 0;i<toSolve;i++) {
-                //Ask for a hint
+            if (toSolve>1) {
                 var box = sudoku.GetHint ();
-                //Check at what location the hint is positioned
-                //We are always able to grab the first, since it is a hint from the dll
+
+                var vBox = ViewBoxes.Where (x => x.X==box.X&&x.Y==box.Y).First ();
+                vBox.Value=box.Value;
+            } else {
+                MessageBox.Show ("No more Hints!", "Hints");
+            }
+            
+        }
+        public void CheatGame () {
+            int toSolve = ViewBoxes.Where (x => x.Value==0).Count ();
+            for (int i = 0;i<toSolve;i++) {
+                var box = sudoku.GetHint ();
                 var vBox = ViewBoxes.Where (x => x.X==box.X&&x.Y==box.Y).First ();
                 vBox.Value=box.Value;
             }

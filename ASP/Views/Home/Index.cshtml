@@ -12,21 +12,19 @@
     ViewBag.GameState="Game complete";
     <script type="text/javascript">
         //$("#btncheatgame").prop('disabled', true);
-        //alert("Gefeliciteerd! Je hebt de sudoku opgelost!");
-        console.log('Gefeliciteerd! Je hebt de sudoku opgelost!')
+        console.log('Solved')
     </script>
 } else {
     <script type="text/javascript">
         //$("#btncheatgame").prop('disabled', false);
-        //alert("Sudoku is nog niet correct");
-        console.log('Sudoku is nog niet correct')
+        console.log('incorrect')
     </script>
 }
 
 @if (!Model.IsValid ()) {
-    ViewBag.BoxState="getal klopt niet! <button class='btn-danger BlockUndo'>Undo</button>";
+    ViewBag.BoxState="Number incorrect <button class='btn-danger BlockUndo'>Undo</button>";
     <script type="text/javascript">
-        alert("Het ingevoerde getal klopt niet.");
+        //alert("value not correct");
     </script>
 }
 
@@ -58,3 +56,5 @@
                 }
             }
     </div>
+
+<div class="lol"><button class="ch" onclick="location.href='@Url.Action("Cheat", "Home")'">Cheat</button></div>

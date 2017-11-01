@@ -21,13 +21,24 @@ namespace ASP.Controllers {
             return RedirectToAction ("Index");
         }
 
-        public ActionResult Hint () {
+        public ActionResult Cheat () {
             RetrieveGameSession ();
-            int toSolve = curgame.GetBoard ().Where (x => x.Value==0).Count ()-2;
+            int toSolve = curgame.GetBoard ().Where (x => x.Value==0).Count ();
             for (int x = 0;x<toSolve;x++) {
                 Box box = curgame.GetHint ();
                 curgame.SetValue (box);
             }
+            return RedirectToAction ("Index");
+        }
+
+        public ActionResult Hint () {
+            RetrieveGameSession ();
+            int toSolve = curgame.GetBoard ().Where (x => x.Value==0).Count ();
+            if (toSolve>1) {
+                Box box = curgame.GetHint ();
+                curgame.SetValue (box);
+            }
+            
             return RedirectToAction ("Index");
         }
 

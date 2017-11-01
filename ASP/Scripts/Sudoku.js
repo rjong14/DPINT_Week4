@@ -3,7 +3,7 @@
         url: "/Home/SetValue/?posx=" + x + "&posy=" + y + "&value=" + value,
         type: "GET",
         error: function (response) {
-            alert("Er ging iets mis bij het opslaan van de waarde");
+            alert("500 server not found");
         },
     });
 }
@@ -25,23 +25,63 @@ const sendBox = (x, y, value) => {
     if (isNaN(value)) {
         //txtInput.val(0);
         $('.box-' + x + '-' + y).val(0)
-        alert('Voer een getal in.');
+        alert('no value');
         return;
     }
     if (value < 1 || value > 9) {
         //txtInput.val(0);
         $('.box-' + x + '-' + y).val(0)
-        alert('Voer een getal in van 1 t/m 9.');
+        alert('Between 1 & 9 ploX');
         return;
     }
     localStorage.setItem('bid', '.box-' + x + '-' + y)
     //$('.lastBox').attr('bid', '.box-' + x + '-' + y)
-    //Ajax call to method, we don't want a postback to occur
     sendNum(x,y, value)
     location.reload();
 }
 
+const makeNewPosition = () => {
+
+    // Get viewport dimensions (remove the dimension of the div)
+    var h = $(window).height() - 50;
+    var w = $(window).width() - 50;
+
+    var nh = Math.floor(Math.random() * h);
+    var nw = Math.floor(Math.random() * w);
+
+    return [nh, nw];
+
+}
+
+
+const calcSpeed = (prev, next) => {
+
+    var x = Math.abs(prev[1] - next[1]);
+    var y = Math.abs(prev[0] - next[0]);
+
+    var greatest = x > y ? x : y;
+
+    var speedModifier = Math.random() / 1;
+
+    var speed = Math.ceil(greatest / speedModifier);
+
+    return speed;
+
+}
+
+const animateDiv = () => {
+    var newq = makeNewPosition();
+    var oldq = $('.lol').offset();
+    var speed = calcSpeed([oldq.top, oldq.left], newq);
+
+    $('.lol').animate({ top: newq[0], left: newq[1] }, speed, function () {
+        animateDiv();
+    });
+
+};
+
 (() => {
+    animateDiv();
     $('.BoxState').on('click', '.BlockUndo', () => {
         console.log('click')
         let lb = localStorage.getItem('bid')

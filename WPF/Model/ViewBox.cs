@@ -24,19 +24,14 @@ namespace WPF.ViewModel
         public short Value {
             get => box.Value;
             set {
-                //Validate value
                 if (value>9||value<1) {
-                    MessageBox.Show ("Vul een waarde van 1 t/m 9 in.", "Ongeldige waarde", MessageBoxButton.OK, MessageBoxImage.Exclamation);
+                    MessageBox.Show ("Give a value between 1 & 9", "Invalid value error", MessageBoxButton.OK, MessageBoxImage.Exclamation);
                     return;
                 }
-
-                //Value has been validated, set the property
                 box.Value=value;
-                //Update class library value
                 game.SetValue (box);
-                //Check if game has been finished
                 if (game.IsCompleted ()) {
-                    MessageBox.Show ("De Sudoku is opgelost", "Sudoku opgelost", MessageBoxButton.OK, MessageBoxImage.Exclamation);
+                    MessageBox.Show ("Game is completed", "Sudoku!", MessageBoxButton.OK, MessageBoxImage.Exclamation);
                 }
                 OnPropertyChanged ();
             }
